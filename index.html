@@ -13,9 +13,9 @@ body {
 }
 .container {
     position: absolute;
-    top: 100%;
+    top: 50%;
     left: 50%;
-    transform : translate(-50%,-10%);
+    transform : translate(-50%,-50%);
     background-color: #e8e5e3;
     border-radius: 2rem;
     height: 60vh;
@@ -59,54 +59,7 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     background-size: cover;
 }
-section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform : translate(-50%,-50%);
-    background-color: #e8e5e3;
-    border-radius: 2rem;
-    height: 70vh;
-    width: 60%;
-    box-shadow: 0 0.7rem 3rem 0 rgba(100, 100, 100,0.2);
-}
-.clip_path_background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: inherit;
-    width: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0.7rem 3rem 0 rgba(100, 100, 100,0.2);
-    transition: all 0.4s linear;
-}
-.bg1{
-    background-color: #FF9933;
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-}
-.bg2{
-    text-align: center;
-    background-color: #FFFFFF;
-    clip-path: polygon(0 70%, 100% 70%, 100% 30%, 0 30%);
-}
-.bg2 img{
-    margin-top: 7.5rem;
-    width: 38%;
-    height:200px;
-    animation:spin 15s linear infinite;
-}
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-.bg3{
-    background-color: #138808;
-    clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
-}
-section:hover .clip_path_background{
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-section .clip_path_background:hover{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    background-size: cover;
-}
+
     </style>
 </head>
  <body>
