@@ -1,0 +1,131 @@
+<html>
+<head>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(253, 254, 255);
+  height: 100%;
+  width: 100%;
+}
+.container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform : translate(-50%,-10%);
+    background-color: #e8e5e3;
+    border-radius: 2rem;
+    height: 60vh;
+    width: 60%;
+    box-shadow: 0 0.7rem 3rem 0 rgba(100, 100, 100,0.2);
+}
+
+
+.clip_path_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0.7rem 3rem 0 rgba(100, 100, 100,0.2);
+    transition: all 0.4s linear;
+}
+.img1{
+    background-image: url("https://cdn.pixabay.com/photo/2021/06/01/06/24/old-town-6300696_960_720.jpg");
+    background-position: center;
+    background-size: contain;
+    clip-path: polygon(24% 0, 79% 0, 67% 100%, 40% 100%);
+}
+.img2{
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828__340.jpg");
+    background-position: left;
+    background-size: contain;
+    clip-path: polygon(0 0, 25% 0, 40% 100%, 0% 100%);
+}
+.img3{
+    background-image: url("https://cdn.pixabay.com/photo/2015/04/16/15/22/japan-725795__340.jpg");
+    background-position: right;
+    background-size: contain;
+    clip-path: polygon(73% 0, 100% 0, 100% 100%, 58% 100%);
+}
+.container:hover .clip_path_image{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.container .clip_path_image:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-size: cover;
+}
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+    background-color: #e8e5e3;
+    border-radius: 2rem;
+    height: 70vh;
+    width: 60%;
+    box-shadow: 0 0.7rem 3rem 0 rgba(100, 100, 100,0.2);
+}
+.clip_path_background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0.7rem 3rem 0 rgba(100, 100, 100,0.2);
+    transition: all 0.4s linear;
+}
+.bg1{
+    background-color: #FF9933;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+}
+.bg2{
+    text-align: center;
+    background-color: #FFFFFF;
+    clip-path: polygon(0 70%, 100% 70%, 100% 30%, 0 30%);
+}
+.bg2 img{
+    margin-top: 7.5rem;
+    width: 38%;
+    height:200px;
+    animation:spin 15s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.bg3{
+    background-color: #138808;
+    clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+}
+section:hover .clip_path_background{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+section .clip_path_background:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-size: cover;
+}
+    </style>
+</head>
+ <body>
+     <section>
+        <div class="clip_path_background bg1"></div>
+        <div class="clip_path_background bg2">
+            <img src="./Dharmachakra.png" alt="placeholder" />
+        </div>
+        <div class="clip_path_background bg3"></div>
+     </section>
+     <br />
+   <div class="container">
+       <div class="clip_path_image img1">
+       </div>
+       <div class="clip_path_image img2">
+       </div>
+       <div class="clip_path_image img3">
+       </div>
+       
+   </div>
+ </body>
+</html>
